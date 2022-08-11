@@ -1,10 +1,12 @@
+const { PermissionFlagsBits } = require('discord.js');
+
 module.exports = {
     CREATE_INSTANT_INVITE: ['CREATE_INSTANT_INVITE', 0x1],
     KICK_MEMBERS: ['KICK_MEMBERS', 0x2],
     BAN_MEMBERS: ['BAN_MEMBERS', 0x4],
     ADMINISTRATOR: ['ADMINISTRATOR', 0x8],
-    MANAGE_CHANNELS: ['MANAGE_CHANNELS', 0x10],
-    MANAGE_GUILD: ['MANAGE_GUILD', 0x20],
+    MANAGE_CHANNELS: [PermissionFlagsBits.ManageChannels, 0x10],
+    MANAGE_GUILD: [PermissionFlagsBits.ManageGuild, 0x20],
     ADD_REACTIONS: ['ADD_REACTIONS', 0x40],
     VIEW_AUDIT_LOG: ['VIEW_AUDIT_LOG', 0x80],
     PRIORITY_SPEAKER: ['PRIORITY_SPEAKER', 0x100],
